@@ -9,13 +9,14 @@
   "categories": [
     "Other"
   ],
+  "publisher": "oheim-cn-wrapper-publisher",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "cn-wrapper.wrap",
-        "title": "cn-wrapper:Wrap/insert cn",
+        "title": "cn-wrapper: Wrap/insert cn",
         "shortTitle": "Wrap/insert cn"
       }
     ],
