@@ -3,7 +3,7 @@
 Utility to wrap React className string with cn call,
 or add className attribute with it, if none is found.
 
-[example](./example.gif)
+![example](https://github.com/oscarheimdahl/cn-wrapper/blob/main/example.gif?raw=true)
 
 Can customize `cn` prefix to `clsx` or whatever.
 
