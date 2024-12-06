@@ -2,7 +2,7 @@
   "name": "cn-wrapper",
   "displayName": "cn-wrapper",
   "description": "Wrap React className string with cn call",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.95.0"
   },
