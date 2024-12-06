@@ -2,7 +2,7 @@
   "name": "cn-wrapper",
   "displayName": "cn-wrapper",
   "description": "Wrap React className string with cn call",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.95.0"
   },
@@ -11,8 +11,13 @@
   ],
   "icon": "images/icon.png",
   "publisher": "oheim-cn-wrapper-publisher",
-  "activationEvents": [],
   "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact"
+  ],
   "contributes": {
     "commands": [
       {
@@ -36,7 +41,21 @@
           "description": "if to insert the className attribute if none is found"
         }
       }
-    }
+    },
+    "codeActions": [
+      {
+        "actions": {
+          "title": "cn-wrapper: Wrap/insert cn",
+          "kind": "quickfix",
+          "description": "Wrap/insert cn"
+        },
+        "languages": [
+          "javascript",
+          "tsx",
+          "jsx"
+        ]
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "pnpm run compile",

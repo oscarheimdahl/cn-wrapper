@@ -24,6 +24,10 @@ Calling out known issues can help limit users opening duplicate issues against y
 
 ## Release Notes
 
+### 1.0.0
+
+Add quickfix action
+
 ### 0.0.3
 
 Add icon
