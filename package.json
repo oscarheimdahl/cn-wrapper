@@ -1,0 +1,58 @@
+{
+  "name": "cn-wrapper",
+  "displayName": "cn-wrapper",
+  "description": "Wrap React className string with cn call",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cn-wrapper.wrap",
+        "title": "cn-wrapper:Wrap/insert cn",
+        "shortTitle": "Wrap/insert cn"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "cn-wrapper",
+      "properties": {
+        "cnWrapper.prefix": {
+          "type": "string",
+          "default": "cn",
+          "description": "cn prefix, usually cn or clsx"
+        },
+        "cnWrapper.insertOnNoClassNameAttribute": {
+          "type": "boolean",
+          "default": true,
+          "description": "if to insert the className attribute if none is found"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint": "^9.13.0",
+    "typescript": "^5.6.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
